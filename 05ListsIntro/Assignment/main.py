@@ -112,6 +112,38 @@ print("#####################")
 print("")
 
 def make_copy(list):
-  return ([0],[1],[2]
-  [1
-   ]
+   return(list[0],list[1],list[2])
+
+print("make a cop demo")
+print("0,1,2=>",make_copy([0,1,2]))
+print("#####################")
+print("")
+
+
+def repeat_thrice(item):
+   return(item[0],item[0],item[0])
+
+print("repeat thrice demo")
+print("1=>",repeat_thrice([1]))
+print("#####################")
+print("")
+
+def make_reversed_copy(list):
+  return(list[2], list[1], list[0])
+
+print("reversed demo")
+print("1,7,9=>",make_reversed_copy([1,7,9]))
+print("#####################")
+print("")
+
+def reverse_in_place(list):
+    first =list[2]
+    second=list[1]
+    last=list[0]
+    return(first,second,last)
+
+print("reverse in place demo")
+print("reversed= 3,2,1=>","inorder=>",reverse_in_place([3,2,1]))
+print("#####################")
+print("")
+
