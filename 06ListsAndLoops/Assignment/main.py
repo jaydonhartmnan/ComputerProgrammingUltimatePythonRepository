@@ -54,3 +54,63 @@ returnValue = avergage_act_score(inputlist)
 print("Avergage act score=",(returnValue))
 print("######################################")
 print("")
+
+def all_true(list):
+   for item in list:
+       if item not in["True"]:
+        return False
+   return True 
+   
+inputlist = ["True","False","True","True"]
+returnValue = all_true(inputlist)
+print("True,False,True,True-All true=",(returnValue))
+print("######################################")
+print("")
+
+def any_true(list):
+   for item in list:
+      if item in ["True"]:
+         return True
+      
+inputlist = ["True","False","True","True"]
+returnValue = any_true(inputlist)
+print("True,False,True,True-Any true=",(returnValue))
+print("######################################")
+print("")
+
+truecount=0
+falsecount=0
+def mostly_true(list):
+   for item in list:
+      if item in list=="True":
+         truecount== truecount + 1
+   for item in list:
+      if item in list=="False":
+         falsecount==falsecount + 1
+   if truecount > falsecount:
+      return True 
+   else:
+      return False
+
+inputlist = ["Falsee","False","False","True"]
+returnValue = mostly_true(inputlist)
+print("False,False,False,True-mostly true=",(returnValue))
+print("######################################")
+print("")
+
+def has_vowel(input):
+   for item in input:
+      if item in(["a", "e", "a", "i", "u", "o"]):
+         return True
+      else:
+         return False
+inputlist = ["e"]
+inputlist1 = ["t"]
+
+returnValue = has_vowel(inputlist)
+print("e=",(returnValue))
+returnValue1 = has_vowel(inputlist)
+print("a=",(returnValue1))
+
+print("######################################")
+print("")
