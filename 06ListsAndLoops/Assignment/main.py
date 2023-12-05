@@ -47,7 +47,7 @@ def avergage_act_score(list):
           validact= validact + act
           count= count + 1
       mean= validact/count
-      return mean
+   return mean
    
 inputlist4 = [-5, 24, 31, 56, 25]
 returnValue = avergage_act_score(inputlist4)
@@ -71,6 +71,7 @@ def any_true(list):
    for item in list:
       if item in ["True"]:
          return True
+   return False
       
 inputlist6 = ["True","False","True","True"]
 returnValue = any_true(inputlist6)
@@ -78,12 +79,13 @@ print("True,False,True,True-Any true=",(returnValue))
 print("######################################")
 print("")
 
-truecount=0
-falsecount=0
+
 def mostly_true(list):
+   truecount=0
+   falsecount=0
    for item in list:
       if item in list=="True":
-         truecount== truecount + 1
+         truecount==truecount + 1
    for item in list:
       if item in list=="False":
          falsecount==falsecount + 1
@@ -130,14 +132,13 @@ print("1,2,3",all_the_same([1,2,3]))
 print("######################################")
 print("")
 
-def increasing(list):
-    first= list[0]
-    previos = list[0]-1
-    for num in list:
-      if num <= previos and num < first:
+def increasing(nums):
+    previos = nums[0]-1
+    for num in nums:
+      if num <= previos:
          return False
-      else:
-         return True
+      previos = num
+    return True 
 
 print("increasing demo")
 print("2,2,2",increasing([2,2,2]))
@@ -146,16 +147,52 @@ print("######################################")
 print("")
 
 def incrimating(list):
+   previos =list[0]-1
    for num in list:
-      if list[1]== (list[0]-1) or list[1]==(list[0]+1):
-         return True
-      else:
+      if num != previos +1 :
          return False
+      previos = num
+   return True
+
 
 print("incimating demo")     
-print("2,2",incrimating([2,2]))
+print("1,1",incrimating([1,1]))
 print("1,2,",incrimating([1,2]))
 print("######################################")
 print("")
 
-      
+def has_adjacant_repeat(list):
+   previos =list[0]-1
+   for num in list:
+       if num == previos:
+        return True
+       previos = num
+   return False 
+
+print("has adjacant repeat demo")     
+print("2,2",has_adjacant_repeat([2,2]))
+print("1,2,",has_adjacant_repeat([1,2]))
+print("######################################")
+print("")
+
+def sum_with_skips(nums):
+   total=0
+   skips="False"
+   for num in nums:
+      if num == -1:
+         if skips== True:
+            if num== -1:
+               skips== False
+      elif skips == False: 
+          if num == -1:
+            skips== True
+      else: 
+            total= total + num 
+
+   return total
+print("2,2,3,4,5,6,-1,-1=",sum_with_skips([2,2,3,4,5,6,-1,-2]))
+print("-1,2,3,5,8,-1,0,3,2=",sum_with_skips([-1,2,3,5,8,-1,0,3,2]))
+                     
+
+            
+            
