@@ -100,17 +100,17 @@ print("")
 
 def has_vowel(input):
    for item in input:
-      if item in(["a", "e", "a", "i", "u", "o"]):
+      if item in"a, e, , i u, o":
          return True
-      else:
-         return False
+      
+   return False
 inputlist8 = ["e"]
-inputlist9 = ["t"]
+inputlist9 = ["a"]
 print("has a vowel demo")
 returnValue = has_vowel(inputlist8)
 print("e=",(returnValue))
 returnValue1 = has_vowel(inputlist9)
-print("z=",(returnValue1))
+print("a=",(returnValue1))
 
 print("######################################")
 print("")
@@ -131,11 +131,14 @@ print("######################################")
 print("")
 
 def increasing(list):
-   for num in list:
-      if list[0]<list[1] and list[1]<list[2]:
-         return True
-      else:
+    first= list[0]
+    previos = list[0]-1
+    for num in list:
+      if num <= previos and num < first:
          return False
+      else:
+         return True
+
 print("increasing demo")
 print("2,2,2",increasing([2,2,2]))
 print("1,2,3",increasing([1,2,3]))
@@ -156,5 +159,3 @@ print("######################################")
 print("")
 
       
-def adjacant(list):
-   if 
