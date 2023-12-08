@@ -117,6 +117,19 @@ print("to_snake_case")
 print("hello world, it it a good day=>",to_snake_case("hello world, it it a good day"))
 print("####################")
 
+def without_duplicate(string):
+   result= ""
+   previos= string[0]-1
+   for numbers in string:
+      if numbers == previos:
+         result= result.replace((numbers,previos),"")
+   return result       
+print("without_duplicate")
+print ("1,2,3,3,1>",without_duplicate([1,2,3,3,1]))
+print ("4,4,5,5,6,6=>",without_duplicate([4,4,5,5,6]))
+print ("3,4,5,9,7=>",without_duplicate([3,4,5,9,7]))
+print("####################")
+
 
 def filter_valid_act_scores(list):
    validact=  0
