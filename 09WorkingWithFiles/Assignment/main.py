@@ -61,5 +61,18 @@ for row in reader:
         f=int(f+1)
 print("a,b,c,d,e->",a,b,c,d,f)
 
+f = open("../data/gradebook_data.csv", "r")
+reader = csv.reader(f) 
+failingseniors=""
+
+for row in reader:
+    name, gradelevel, percent = row
+    percent= int(percent)
+    gradelevel=int(gradelevel)
+    if gradelevel== 12 and percent< 60:
+        failingseniors= failingseniors+"  " + name
+print("faling seniors->",failingseniors)
+
+
 
     
